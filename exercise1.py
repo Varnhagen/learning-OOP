@@ -3,6 +3,11 @@ class Human:
     age = None
     sex = ""
 
+    def __init__(self, name, age, sex):
+        self.name = name
+        self.age = age
+        self.sex = sex
+
     def say_hello(self):
         print("Hi! My name is " + self.name)
     
@@ -18,12 +23,12 @@ class Human:
         else:
             print("Huh?")
 
-citizen1 = Human()
-citizen1.name = "Mike"
-citizen1.age = 23
-citizen1.sex = "male"
+citizen1 = Human("Mike", 23, "male")
 
-print(f"Object - {citizen1.sex}, {citizen1.name}, age: {citizen1.age}")
+
+print(f"\n Object - {citizen1.sex}, {citizen1.name}, age: {citizen1.age}\n")
 citizen1.say_hello()
 citizen1.move()
 citizen1.think()
+
+
