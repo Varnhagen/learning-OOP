@@ -1,7 +1,4 @@
 class Human:
-    name = ""
-    age = None
-    sex = ""
 
     def __init__(self, name, age, sex):
         self.name = name
@@ -31,4 +28,30 @@ citizen1.say_hello()
 citizen1.move()
 citizen1.think()
 
+class Book:
+ 
+    def __init__(self, title, pages, author, year, owner):
+        self.title = title
+        self.pages = pages
+        self.author = author
+        self.year = year
+        self.owner = owner
+    
+    def info(self):
+        print(f"Title: {self.title}, \n author: {self.author}, \n year of publication: {self.year}, \n number of pages: {self.pages}, \n owner: {self.owner} ")
+
+    def new_owner(self, new_owner):
+        self.owner = new_owner
+    
+book1 = Book("A Fest for Crows", 753, "George R. R. Martin", 2005, "Martin")
+book2 = Book("The Forever War", 236, "Joe Haldeman", 1974, "Martin")
+book3 = Book("The Lady of the Lake", 544, "Andrzej Sapkowski", 1999, "Martin")
+    
+my_library = [book1, book2, book3]
+
+for i in my_library:
+    print(i.info())
+
+
+        
 
